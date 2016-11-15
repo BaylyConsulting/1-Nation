@@ -11,7 +11,7 @@ import {CustomersService} from './services/customers';
 export class AppComponent {
   router: Router;
   isDarkTheme: boolean = false;
-  title = 'XPO Angular UI Demo Application';
+  title = '1 Nation';
 
   constructor(_router: Router){   
        this.router = _router;

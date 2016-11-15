@@ -1,7 +1,7 @@
 {
-  "name": "xpo-angular-seed-app",
-  "description": "Enteprise Seed application for angular 2",
-  "author": "Liam Bayly <ray.bayly@xpo.com> (http://www.xpo.com)",
+  "name": "1-Nation-Prototype",
+  "description": "1 Nation Prototype Application",
+  "author": "Liam Bayly <ray.bayly@xpo.com> (http://www.baylyconsulting.com)",
   "version": "0.0.1",
   "license": "MIT",
   "angular-cli": {},

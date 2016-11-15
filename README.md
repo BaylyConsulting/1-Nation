@@ -1,8 +1,8 @@
-# XPO-Angular-Seed-App
+# 1 Nation Prototype
 
-[![XPO|Logistics](http://www.gtransitit.com/images/xpo.jpg)](http://xpo.com)
+[![Bayly|Consulting](http://www.baylyconsulting.com/wp-content/uploads/2016/07/logo-e1468100765654.png)](http://baylyconsulting.com)
 
-This is the XPO angular seed for enterprise development of websites using angular 2, this is an extension of the cli setup for enterprise development utilizing googles best practices for component, pipe, services development 
+1 Nation Angular 2 Prototype
 
 ##Getting Started
 - Clone the repository into a folder
