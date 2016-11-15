@@ -4,6 +4,7 @@ import { RouterModule, Router } from '@angular/router';
 
 //page imports
 import { HomeComponent } from './components/home/home';
+import {AboutUsComponent} from './components/aboutus/aboutus';
 import { PageNotFoundComponent } from './components/pagenotfound/pagenotfound';
 
 //Customer module
@@ -16,6 +17,7 @@ import { CustomerDetailsComponent } from './components/customers/details/custome
     RouterModule.forRoot([
       { path: '', component: HomeComponent, data: {title: 'Welcome to Xpo Angular UI Demo Application'} },
       { path: 'customer/main', component: CustomerMainComponent, data: {title: 'Customer Main'} },
+       { path: 'company/aboutus', component: AboutUsComponent, data: {title: 'About Us'} },
       { path: 'customer/list', component: CustomerListComponent, data: {title: 'Customer List'} },
       { path: 'customer/details/:id', component: CustomerDetailsComponent, data: {title: 'Customer Details'} },
       { path: '**', component: PageNotFoundComponent, data: {title: 'Page Not Found'}  }

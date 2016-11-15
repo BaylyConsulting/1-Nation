@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 //page imports
 import { HomeComponent } from './components/home/home';
+import { AboutUsComponent} from './components/aboutus/aboutus'
 import { PageNotFoundComponent } from './components/pagenotfound/pagenotfound';
 
 //Customer module
@@ -28,6 +29,7 @@ import { SamplePipe } from './pipes/sample';
   declarations: [
     AppComponent,
     HomeComponent,
+    AboutUsComponent,
     CustomerMainComponent,
     CustomerListComponent,
     CustomerDetailsComponent,
