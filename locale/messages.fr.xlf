@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="fr" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="ad9b25e6399254382f50b1ef5b9b76fdfb129927" datatype="html">
+        <source>Welcome Home</source>
+        <target/>
+        <note priority="1" from="description">An Introduction title to the page</note>
+      </trans-unit>
+      <trans-unit id="9ba6bfd8a926dd7475f25e6829ac4f6a32109995" datatype="html">
+        <source>This is the home page for the app</source>
+        <target/>
+        <note priority="1" from="description">The Greeting Message for the page</note>
+      </trans-unit>
+      <trans-unit id="03354b2489337882c5a4fd033fec9b9f4b8d109f" datatype="html">
+        <source>Page Not Found</source>
+        <target/>
+        <note priority="1" from="description">Page title</note>
+      </trans-unit>
+      <trans-unit id="468b3e2fd56010a6658e86a0b079ebdda5a7d042" datatype="html">
+        <source>This is the global page not found </source>
+        <target/>
+        <note priority="1" from="description">Page Introduction</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

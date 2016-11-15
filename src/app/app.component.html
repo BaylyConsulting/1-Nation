@@ -1,0 +1,13 @@
+<md-toolbar color="primary">
+    {{title}}
+    <span class="app-toolbar-filler"></span>
+</md-toolbar>
+<br><br>
+    <md-card>
+      <button md-raised-button color="accent" md-tooltip="This is the Home Button" (click)="nav('/')">HOME</button>
+      <button md-raised-button color="primary" md-tooltip="This is the Customer Main Link" (click)="nav('customer/main')">CUSTOMERS</button>
+      <button md-raised-button color="primary" md-tooltip="This is the Page Not Found Button" (click)="nav('/scooby')">PAGE NOT FOUND</button>
+    </md-card>
+    <hr>    
+    <br><br>
+    <router-outlet></router-outlet>
