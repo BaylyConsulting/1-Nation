@@ -1,13 +1,30 @@
-<md-toolbar color="primary">
-    {{title}}
-    <span class="app-toolbar-filler"></span>
-</md-toolbar>
-<br><br>
-    <md-card>
-      <button md-raised-button color="accent" md-tooltip="This is the Home Button" (click)="nav('/')">HOME</button>
-      <button md-raised-button color="primary" md-tooltip="This is the Customer Main Link" (click)="nav('customer/main')">CUSTOMERS</button>
-      <button md-raised-button color="primary" md-tooltip="This is the Page Not Found Button" (click)="nav('/scooby')">PAGE NOT FOUND</button>
-    </md-card>
-    <hr>    
-    <br><br>
-    <router-outlet></router-outlet>
+<div class="maindiv">
+  <mat-toolbar class="header">
+    <mat-toolbar-row>
+      <img src="{{ this.logo }}" height="60" width="60" />
+      <span class="title">{{ this.title }}</span>
+      <span class="fill-remaining-space"></span>
+      <span class="menu">
+      <button mat-button [matMenuTriggerFor]="menu">Company</button>
+      <mat-menu #menu="matMenu">
+          <button mat-menu-item [routerLink]="['./home/index']" routerLinkActive="active">Home</button>
+        <button mat-menu-item [routerLink]="['./home/httptest']" routerLinkActive="active">HTTP Test</button>
+        <button mat-menu-item [routerLink]="['./home/version']" routerLinkActive="active">Version</button>
+      </mat-menu>
+    </span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div class="site">
+    <div class="content">
+      <div align="center">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    <footer>
+      <div align="center">
+        Version: {{ this.version }}
+      </div>
+    </footer>
+  </div>
+</div>

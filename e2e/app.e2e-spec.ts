@@ -1,14 +1,14 @@
-import { DemoPage } from './app.po';
+import { AppPage } from './app.po';
 
-describe('demo App', function() {
-  let page: DemoPage;
+describe('testseed App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new DemoPage();
+    page = new AppPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should render bc-header', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getHeader()).not.toBeNull();
   });
 });

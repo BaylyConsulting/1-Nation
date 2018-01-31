@@ -1,30 +1,31 @@
-# 1 Nation Prototype
+# Bayly Consulting (ANGULAR 5 SEED)
+### This is the seed for bayly consulting projects.
 
-[![Bayly|Consulting](http://www.baylyconsulting.com/wp-content/uploads/2016/07/logo-e1468100765654.png)](http://baylyconsulting.com)
-
-1 Nation Angular 2 Prototype
-
-##Getting Started
-- Clone the repository into a folder
-- Run $npm install
-- Begin Development. 
-- Its that simple
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 
 
-##Internationalization i18n
-The system comes complete with i18n configured and setup. 
-- You have a local file complete with a sample english file
-- Once you complete building the application you build your xlf file for english
-- This file is sent to someone to translate it, you can set the locale variable in the index.html to build to different languages
-- When you put static text on the page use the i18n variable as seen in the page examples to mark text for translation. 
-- Run $npm run translate:build to compile the static text into a translation file. 
+## What is a bloc ?
+A bloc is a site area allowing you to package multiple views within an area to deliver it to the site, an area could be a store or a user area , but the architecture of the seed is built upon the bloc architecture.
 
-##Find out more about 118n and its use 
-'https://angular.io/docs/ts/latest/cookbook/i18n.html#!/%23angular-i18n'
+[![N|Solid](https://github.com/BaylyConsulting/BC-Angular-4-Seed/blob/V-2-0-0/src/assets/i/figure1.jpg?raw=true)]()
 
+
+Creating a new Bloc
+
+1. Create a folder under ```/src``` calling it your bloc name ```name.bloc```
+2. populate it with the files from the example.bloc and edit it to create a new bloc (new module and component name)
+3. Add the bloc to the ```/src/app/app.routes``` using the example in the routes file to know how and you are off and running.
+
+
+then you are good to go and ready to use the board library
 
 ## Development server
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
@@ -36,5 +37,11 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). 
+## Code Validation
+Run `npm run tslint` to validate the code via lint
+Run `npm run stylelint` to validate the code via stylelint
+Autofix is also available just following the above command with `-fix` and it will autofix most common mistakes
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
+

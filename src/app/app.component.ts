@@ -1,24 +1,24 @@
-import { Component } from '@angular/core';
-import {Router} from '@angular/router';
-import {CustomersService} from './services/customers';
+import { Component, OnInit } from '@angular/core';
+import { ConfigService, ConfigModel } from '../core/index';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  providers: [CustomersService],
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  router: Router;
-  isDarkTheme: boolean = false;
-  title = '1 Nation';
+export class AppComponent implements OnInit {
+  public title: string = '';
+  public logo: string = '';
+  public version: string = '';
 
-  constructor(_router: Router){   
-       this.router = _router;
-   }
+  constructor(private configService: ConfigService) { }
 
-  nav(LOC:string) {
-    this.router.navigateByUrl(LOC);
-}
+  public ngOnInit() {
+    this.configService.getConfigSettings().subscribe((cfgSettings) => {
+      this.title = cfgSettings.title;
+      this.logo = cfgSettings.logo;
+      this.version = cfgSettings.version;
+    });
+  }
 
 }

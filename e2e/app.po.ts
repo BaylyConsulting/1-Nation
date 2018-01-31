@@ -1,11 +1,11 @@
-import { browser, element, by } from 'protractor';
+import { browser, by, element } from 'protractor';
 
-export class DemoPage {
-  navigateTo() {
+export class AppPage {
+  public navigateTo() {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  public getHeader() {
+    return element(by.tagName('bc-header'));
   }
 }

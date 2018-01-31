@@ -1,50 +1,41 @@
-//core imports
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { MaterialModule } from '@angular/material';
 
-//application Imports
+import {  HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
+import { CoreModule } from '../core/core.module';
+import { HttpClientModule} from '@angular/common/http';
+import { GatewayInterceptor } from '../core/interceptors/error.interceptor'
+
+// adding browser animations
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+// Adding the modules for the material modules we want to use
+import { MaterialModule } from './material.module';
+
+// Imports the Main Application Component (This manages the layout for the application)
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
 
-//page imports
-import { HomeComponent } from './components/home/home';
-import { AboutUsComponent} from './components/aboutus/aboutus'
-import { PageNotFoundComponent } from './components/pagenotfound/pagenotfound';
-
-//Customer module
-import { CustomerMainComponent } from './components/customers/main/customer-main';
-import { CustomerListComponent } from './components/customers/list/customer-list';
-import { CustomerDetailsComponent } from './components/customers/details/customer-details';
-
-//directive imports
-import { TestDirective } from './directives/test';
-
-//pipe imports
-import { SamplePipe } from './pipes/sample';
+// Imports the Routing Module, this manages the initial route setting
+import { AppRoutingModule } from './app.routes';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutUsComponent,
-    CustomerMainComponent,
-    CustomerListComponent,
-    CustomerDetailsComponent,
-    PageNotFoundComponent,
-    TestDirective,
-    SamplePipe
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpModule,
+    HttpClientModule,
+    CoreModule,
     AppRoutingModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+  ],
+  entryComponents: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

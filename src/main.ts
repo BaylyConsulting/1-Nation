@@ -1,19 +1,20 @@
-import './polyfills.ts';
+/**
+ * DO NOT TOUCH
+ * This file is merely a passthrough for the angular application and does not require any configuration.
+ *
+ */
 
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-import { environment } from './environments/environment';
-import { AppModule } from './app/';
-import { getTranslationProviders } from './app/providers/i18n';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { environment } from '../config/environments/environment';
+import { AppModule } from './app/index';
+
+import 'hammerjs';
 
 if (environment.production) {
   enableProdMode();
 }
 
-//Deactivated the active translators until i18n.ts is fixed. 
-//getTranslationProviders().then(providers => {
-//  const options = { providers };
-//  platformBrowserDynamic().bootstrapModule(AppModule, options);
-//});
-
-platformBrowserDynamic().bootstrapModule(AppModule);
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch((err) => err = err);
